@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
+import CatFacts from './CatFacts'
+import * as actionCreators from '../state/action-creators'
 
 function App() {
   return (
     <div className="App">
-      Async Redux Project
+      Cat Facts
     </div>
   );
 }
