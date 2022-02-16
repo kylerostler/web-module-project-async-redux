@@ -1,8 +1,8 @@
 import React from 'react'
 
-export class Todo extends React.Component {
+export default class Fact extends React.Component {
     render() {
-        
+        const { facts } = this.props
         return (
             <div>
                 this is where the cat fact goes 
