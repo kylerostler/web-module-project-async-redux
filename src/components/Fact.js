@@ -1,6 +1,7 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-export default class Fact extends React.Component {
+export  class Fact extends React.Component {
     render() {
         const { facts, getFactFromApi } = this.props
         console.log(this.props)
@@ -12,3 +13,11 @@ export default class Fact extends React.Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return({
+        state: state
+    })
+}
+
+export default connect(mapStateToProps)(Fact)
