@@ -1,12 +1,11 @@
 import React from 'react';
 import '../App.css';
-import * as actionCreators from '../state/action-creators'
 import CatFacts from './CatFacts';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <h1>Cat Facts</h1>
+      <h1>Just Some Facts About Cats</h1>
       <div>
         <CatFacts />
       </div>
@@ -14,4 +13,3 @@ function App() {
   );
 }
 
-export default App;

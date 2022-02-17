@@ -5,13 +5,22 @@ import Fact from './Fact'
 
 export class CatFacts extends React.Component {
     render () {
+        const { facts , getFactFromApi } = this.props
+        console.log(this.props)
         return (
             <div id="catfacts">
                 <h2>Cat Facts Here:</h2>
-                <Fact />
+                    <Fact getFactFromApi={getFactFromApi} key={Date.now()} />
             </div>
         )
     }
 }
 
-export default connect(state => state, actionCreators)(CatFacts)
+const mapStateToProps = (state) => {
+    return({
+        state: state,
+        getFactFromApi: actionCreators.getFactFromApi
+    })
+}
+
+export default connect(mapStateToProps)(CatFacts)

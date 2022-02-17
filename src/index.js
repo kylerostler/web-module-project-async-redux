@@ -5,9 +5,9 @@ import App from './components/App';
 import './index.css';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import factsReducer  from './state/reducer'
+import facts  from './state/reducer'
 
-const store = createStore(factsReducer)
+const store = createStore(facts)
 
 
 ReactDOM.render(
